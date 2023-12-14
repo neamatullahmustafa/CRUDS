@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="text-light  container">
+    <form action="">
+        <label for="productName" class="form-label mt-3 ">productName</label>
+        <input type="text" class="form-control mb-1" id="productName">
+        <label for="productPrice" class="form-label  ">productPrice</label>
+        <input type="text" class="form-control mb-1" id="productPrice">
+        <label for="productCategory" class="form-label ">productCategory</label>
+        <input type="text" class="form-control mb-1" id="productCategory">
+        <label for="productDescription" class="form-label ">productDescription</label>
+        <textarea class="form-control mb-2 " id="productDescription" rows="3"></textarea>
+    </form>
+    <button id="addItemButton" type="button" onclick="addItem()"
+     class="btn mb-3 btn-primary d-block">Add</button>
+    <button id="updateItemButton" type="button" onclick="updateItem()"
+        class="btn mb-3 btn-warning d-none ">Update</button>
+    <label for="searchInput" class="form-label ">Search</label>
+    <input class="form-control mb-5 "  oninput="search()" id="searchInput" placeholder="Type to search...">
+    <table class=" table text-center text-white  ">
+        <thead>
+            <th>Index</th>
+            <th>productName</th>
+            <th>productPrice</th>
+            <th>productCategory</th>
+            <th>productDescription</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="displayItems">
+        </tbody>
+    </table>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/popper.min.js"></script>
+</body>
+
+</html>
